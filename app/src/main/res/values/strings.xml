@@ -3,6 +3,6 @@
     <string name="edit_message">Enter a message</string>
     <string name="min_text">Minimum number</string>
     <string name="max_text">Maximum number</string>
-    <string name="button_confirm">Confirm</string>
+    <string name="confirm_text">Confirm</string>
     <string name="rand_num">0</string>
 </resources>

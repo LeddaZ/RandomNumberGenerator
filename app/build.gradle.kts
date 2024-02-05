@@ -27,7 +27,7 @@ android {
 
     defaultConfig {
         applicationId = "com.leddaz.rng"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = getCommitCount()
         versionName = "1.0.0 (" + getCommitHash() + ")"
@@ -60,11 +60,6 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
-    }
-
-    @Suppress("UnstableApiUsage")
-    androidResources {
-        generateLocaleConfig = true
     }
 }
 

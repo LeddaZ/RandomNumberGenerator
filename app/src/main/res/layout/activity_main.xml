@@ -6,76 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/MinString"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/min_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="10dp"
         android:text="@string/min_text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        app:layout_constraintBottom_toTopOf="@id/min_input"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/MaxString"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/min_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/min_text"
+        app:layout_constraintBottom_toTopOf="@id/max_textview"
+        app:layout_constraintTop_toBottomOf="@id/min_textview">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/min_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/max_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="10dp"
         android:text="@string/max_text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MinTextBox" />
+        app:layout_constraintBottom_toTopOf="@+id/max_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/min_input" />
 
-    <EditText
-        android:id="@+id/MinTextBox"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/max_input"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MinString" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/min_text"
+        app:layout_constraintBottom_toTopOf="@id/confirm_button"
+        app:layout_constraintTop_toBottomOf="@id/max_textview">
 
-    <EditText
-        android:id="@+id/MaxTextBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MaxString" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/max_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/ConfirmButton"
+        android:id="@+id/confirm_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="20dp"
         android:onClick="genNum"
-        android:text="@string/button_confirm"
+        android:text="@string/confirm_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MaxTextBox" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/max_input" />
 
-    <TextView
-        android:id="@+id/RandomNumber"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/result_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
         android:text="@string/rand_num"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="36sp"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/confirm_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
