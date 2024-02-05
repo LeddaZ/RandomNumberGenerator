@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Generatore di numeri</string>
+    <string name="min_text">Numero minimo</string>
+    <string name="max_text">Numero massimo</string>
+    <string name="confirm_text">Conferma</string>
+    <string name="enter_number">Inserisci un numero</string>
+</resources>
