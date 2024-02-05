@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val rnd = Random.nextInt(min.toInt(), max.toInt())
         val result = findViewById<MaterialTextView>(R.id.result_textview)
         result.text = rnd.toString()
-        result.visibility = View.VISIBLE
+        if (result.visibility == View.INVISIBLE)
+            result.visibility = View.VISIBLE
     }
 }
